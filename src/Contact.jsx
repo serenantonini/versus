@@ -93,9 +93,9 @@ export default function Contact() {
           {status && <p className="form-status">{status}</p>}
 
           <div className="contact-actions">
-            <a href="mailto:serenantonini@gmail.com" className="btn secondary">📧 Email</a>
+            <a href="mailto:versus.weblab@outlook.it" className="btn secondary">📧 Email</a>
             <a
-              href="https://www.linkedin.com/in/serenantonini/"
+              href="https://www.linkedin.com/in/versus-weblab/"
               target="_blank"
               rel="noopener noreferrer"
               className="btn secondary"
@@ -118,9 +118,9 @@ export default function Contact() {
               Contattaci qui sotto: siamo pronte a collaborare!  👇
             </p>
             <div className="contact-actions-mobile">
-              <a href="mailto:serenantonini@gmail.com" className="btn secondary">📧 Email</a>
+              <a href="mailto:versus.weblab@outlook.it" className="btn secondary">📧 Email</a>
               <a
-                href="https://www.linkedin.com/in/serenantonini/"
+                href="https://www.linkedin.com/in/versus-weblab/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn secondary"
