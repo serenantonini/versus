@@ -12,7 +12,7 @@ export default function Footer({ isLight }) {
         </div>
         <div className="footer-info">
           <p>
-            © {new Date().getFullYear()} Serena Antonini · Tutti i diritti riservati ·
+            © {new Date().getFullYear()} Versus - Web Lab · Tutti i diritti riservati ·
             P.IVA: 04090340128
           </p>
         </div>

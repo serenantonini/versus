@@ -10,7 +10,7 @@ export default function Navbar({ isLight, setIsLight }) {
     <nav className="navbar">
       <div className="nav-container">
         <div className="logo">
-          <div className="line line-1">SERENA ANTONINI</div>
+          <div className="line line-1">VERSUS</div>
         </div>
 
         <div className={`nav-links ${menuOpen ? "open" : ""}`} style={{ display: 'flex', alignItems: 'center', gap: '24px' }}>

@@ -34,8 +34,7 @@
   margin-top: -32px; /* distanza minima dal cerchio */
   display: flex;
   flex-direction: column;
-  gap: 0; /* distanza minima tra le due scritte */
-  line-height: 1;
+  line-height: 2;
 }
 
 /* Nome in oro */
@@ -47,6 +46,7 @@
   transform: translateY(10px);
   transition: all 0.8s ease;
   margin: 0;
+  letter-spacing: 0.5em; 
 }
 
 /* Sottotitolo in bianco */
@@ -58,6 +58,8 @@
   transform: translateY(10px);
   transition: all 0.8s ease 0.5s; /* ritardo */
   margin: 0;
+  letter-spacing: 0.2em; 
+
 }
 
 /* Classi quando si attivano */

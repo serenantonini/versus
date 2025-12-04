@@ -60,10 +60,10 @@ export default function Intro({ onDone = () => {} }) {
         {/* Testo sotto al logo */}
         <div className="intro-texts">
           <h1 className={`intro-name ${step >= 2 ? "show" : ""}`}>
-            SERENA ANTONINI
+            VERSUS
           </h1>
           <h2 className={`intro-sub ${step >= 2 ? "show-sub" : ""}`}>
-            DIGITAL STUDIO
+            WEB LAB
           </h2>
         </div>
       </div>

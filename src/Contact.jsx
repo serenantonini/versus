@@ -51,8 +51,9 @@ export default function Contact() {
         <div className="contact-text">
           <h2>Il tuo Progetto</h2>
           <p>
-            Sei interessato a sviluppare un sito web, un’app o uno strumento personalizzato?
-            Sono sempre aperta a nuove sfide e collaborazioni. Compila il modulo qui sotto o contattami tramite email o LinkedIn.
+            Vuoi far crescere il tuo progetto con un sito web moderno, funzionale e su misura?
+              Da VERSUS Web Lab realizziamo esperienze digitali uniche, intuitive e performanti.
+              Compila il modulo qui sotto o contattaci via email o LinkedIn: siamo pronte a collaborare! 
           </p>
 
           {/* FORM DESKTOP */}
@@ -104,20 +105,17 @@ export default function Contact() {
           </div>
         </div>
 
-        <div className="contact-image">
-          <img src="/foto.png" alt="Serena Antonini" />
-        </div>
       </div>
 
       {/* MOBILE */}
       <div className="contact-mobile">
         <div className="contact-card-mobile">
-          <img src="/foto.png" alt="Serena Antonini" />
           <div className="contact-text-mobile">
             <h2>Il tuo Progetto</h2>
             <p>
-              Sei interessato a sviluppare un sito web, un’app o uno strumento personalizzato?
-              Sono sempre aperta a nuove sfide e collaborazioni. Contattami qui sotto 👇
+              Vuoi far crescere il tuo progetto con un sito web moderno, funzionale e su misura?
+              Da VERSUS Web Lab realizziamo esperienze digitali uniche, intuitive e performanti. <br />
+              Contattaci qui sotto: siamo pronte a collaborare!  👇
             </p>
             <div className="contact-actions-mobile">
               <a href="mailto:serenantonini@gmail.com" className="btn secondary">📧 Email</a>
