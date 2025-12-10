@@ -24,16 +24,22 @@ export default function Projects() {
       link: "https://serenantonini.github.io/edilimmobiliare/",
       media: "/finiture.png",
     },
+    // {
+    //   title: "Focus Flow",
+    //   desc: "App di produttività realizzata in Java per Android come progetto universitario, con funzioni di to-do list e timer per gestire al meglio le attività quotidiane. Interfaccia chiara e intuitiva, progettata per aiutare gli utenti a organizzare il lavoro e ottimizzare il tempo.",
+    //   media: "/focus.jpeg", // senza link per ora
+    // },
     {
-      title: "Focus Flow",
-      desc: "App di produttività realizzata in Java per Android come progetto universitario, con funzioni di to-do list e timer per gestire al meglio le attività quotidiane. Interfaccia chiara e intuitiva, progettata per aiutare gli utenti a organizzare il lavoro e ottimizzare il tempo.",
-      media: "/focus.jpeg", // senza link per ora
+      title: "Taunik Photo",
+      desc: "Sito web per un fotografo freelance, con sezioni dedicate al portfolio, ai progetti realizzati e ai contatti. Design elegante e completamente personalizzato, ottimizzato per mettere in risalto le fotografie e offrire un’esperienza utente coinvolgente e intuitiva.",
+      link: "https://6927243b4d9f790008db9157--nicole-portfolio-test.netlify.app/",
+      media: "/taunik.png", 
     }
   ];
 
   return (
     <section id="projects" className="section projects">
-      <h2>I miei Progetti</h2>
+      <h2>I nostri Progetti</h2>
       <div className="projects-grid">
         {projects.map((proj, i) => (
           <div key={i} className="project-card">

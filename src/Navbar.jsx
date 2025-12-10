@@ -1,10 +1,12 @@
 import { useState } from "react";
 
-
 export default function Navbar({ isLight, setIsLight }) {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleTheme = () => setIsLight(!isLight);
+
+  // Funzione per chiudere il menu quando clicchi su un link
+  const handleLinkClick = () => setMenuOpen(false);
 
   return (
     <nav className="navbar">
@@ -13,10 +15,14 @@ export default function Navbar({ isLight, setIsLight }) {
           <div className="line line-1">VERSUS</div>
         </div>
 
-        <div className={`nav-links ${menuOpen ? "open" : ""}`} style={{ display: 'flex', alignItems: 'center', gap: '24px' }}>
-          <a href="#hero">Home</a>
-          <a href="#projects">Progetti</a>
-          <a href="#contact">Contatti</a>
+        <div
+          className={`nav-links ${menuOpen ? "open" : ""}`}
+          style={{ display: 'flex', alignItems: 'center', gap: '24px' }}
+        >
+          <a href="#hero" onClick={handleLinkClick}>Home</a>
+          <a href="#projects" onClick={handleLinkClick}>Progetti</a>
+          <a href="#services" onClick={handleLinkClick}>Servizi</a>
+          <a href="#contact" onClick={handleLinkClick}>Contatti</a>
 
           {/* Icona toggle tema minimal */}
           <button

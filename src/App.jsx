@@ -5,6 +5,7 @@ import Navbar from "./Navbar";
 import Projects from "./Projects";
 import Contact from "./Contact";
 import Footer from "./Footer";
+import Servizi from "./Servizi";
 
 export default function App() {
   const [ready, setReady] = useState(false);
@@ -31,6 +32,7 @@ export default function App() {
           <Navbar isLight={isLight} setIsLight={setIsLight} />
           <Hero isLight={isLight} />
           <Projects />
+          <Servizi />
           <Contact />
           <Footer isLight={isLight} />
         </div>
