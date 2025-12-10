@@ -13,8 +13,8 @@ export default function ServiceCard() {
       type: "before-after",
       title: "Restyling siti Web",
       desc: "Aggiornamento e miglioramento di siti web esistenti, con un focus sul design e sull'usabilità per attrarre e coinvolgere i visitatori.",
-      before: "after.jpg",
-      after: "before.jpg",
+      before: "after.png",
+      after: "before.png",
       contactLink: "#contact"
     }
   ];
