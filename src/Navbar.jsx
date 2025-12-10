@@ -12,7 +12,9 @@ export default function Navbar({ isLight, setIsLight }) {
     <nav className="navbar">
       <div className="nav-container">
         <div className="logo">
-          <div className="line line-1">VERSUS</div>
+          <div className="line line-1">
+            VERSUS <span className="web-lab">- web lab</span>
+          </div>
         </div>
 
         <div

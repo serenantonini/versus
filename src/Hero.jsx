@@ -34,7 +34,7 @@ export default function Hero({ isLight }) {
   animate={{ opacity: 1, x: 0 }}
   transition={{ delay: 0.4, duration: 1 }}
 >
-  <span className="text-gold shine">VERSUS</span> - Web Lab
+  <span className="text-gold shine">VERSUS</span>
 </motion.h1>
 
 
