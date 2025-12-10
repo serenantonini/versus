@@ -19,6 +19,8 @@ build:
 deploy:
   stage: deploy
   image: alpine:latest
+  dependencies:
+    - build   # <-- importante: prende la dist dal job build
   before_script:
     - apk add --no-cache lftp
   script:
