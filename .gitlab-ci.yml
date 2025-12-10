@@ -23,7 +23,7 @@ deploy:
   dependencies:
     - build
   before_script:
-    - apk add --no-cache lftp unzip
+    - apk add --no-cache lftp unzip zip
   script:
     - cd dist
     - zip -r ../dist.zip ./*
