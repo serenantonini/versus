@@ -1,3 +1,21 @@
+# .gitlab-ci.yml
+stages:
+  - build
+  - deploy
+
+# 1️⃣ Build del sito
+build:
+  stage: build
+  image: node:18
+  script:
+    - npm install
+    - npm run build
+  artifacts:
+    paths:
+      - dist/
+    expire_in: 1 hour  # mantiene la dist solo per la pipeline
+
+# 2️⃣ Deploy su IONOS (veloce)
 deploy:
   stage: deploy
   image: alpine:latest
