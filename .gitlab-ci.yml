@@ -15,21 +15,28 @@ build:
       - dist/
     expire_in: 1 hour  # mantiene la dist solo per la pipeline
 
+
 # 2️⃣ Deploy su IONOS (veloce)
 deploy:
   stage: deploy
   image: alpine:latest
   dependencies:
-    - build   # <-- importante: prende la dist dal job build
+    - build
   before_script:
-    - apk add --no-cache lftp
+    - apk add --no-cache lftp unzip
   script:
     - cd dist
+    - zip -r ../dist.zip ./*
+    - cd ..
     - lftp -e "
         set ssl:verify-certificate no;
         open -u su86787,\$SFTP_PASS sftp://access-5019178999.webspace-host.com:22;
-        mput *;
+        put dist.zip;
         bye
       "
-  only:
-    - main
+    - lftp -e "
+        set ssl:verify-certificate no;
+        open -u su86787,\$SFTP_PASS sftp://access-5019178999.webspace-host.com:22;
+        ! unzip -o dist.zip -d .;
+        bye
+      "
