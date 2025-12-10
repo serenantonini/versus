@@ -1,21 +1,3 @@
-# .gitlab-ci.yml
-stages:
-  - build
-  - deploy
-
-# 1️⃣ Build del sito
-build:
-  stage: build
-  image: node:18
-  script:
-    - npm install
-    - npm run build
-  artifacts:
-    paths:
-      - dist/
-    expire_in: 1 hour  # conserva la dist solo per la pipeline
-
-# 2️⃣ Deploy su IONOS
 deploy:
   stage: deploy
   image: alpine:latest
@@ -26,7 +8,7 @@ deploy:
     - lftp -e "
         set ssl:verify-certificate no;
         open -u su86787,\$SFTP_PASS sftp://access-5019178999.webspace-host.com:22;
-        mirror -R --verbose . /;
+        mput *;
         bye
       "
   only:
