@@ -1,9 +1,25 @@
+image: node:18
+
+stages:
+  - build
+  - deploy
+
+build:
+  stage: build
+  script:
+    - npm install
+    - npm run build
+  artifacts:
+    paths:
+      - dist/
+
 deploy:
   stage: deploy
   image: alpine:latest
   before_script:
     - apk add --no-cache lftp
   script:
+    - cd dist
     - lftp -e "
         set ssl:verify-certificate no;
         open -u su86787,$SFTP_PASS sftp://access-5019178999.webspace-host.com:22;
