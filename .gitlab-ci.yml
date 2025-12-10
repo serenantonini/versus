@@ -1,0 +1,14 @@
+deploy:
+  stage: deploy
+  image: alpine:latest
+  before_script:
+    - apk add --no-cache lftp
+  script:
+    - lftp -e "
+        set ssl:verify-certificate no;
+        open -u su86787,$SFTP_PASS sftp://access-5019178999.webspace-host.com:22;
+        mirror -R --delete --verbose . /;
+        bye
+      "
+  only:
+    - main
